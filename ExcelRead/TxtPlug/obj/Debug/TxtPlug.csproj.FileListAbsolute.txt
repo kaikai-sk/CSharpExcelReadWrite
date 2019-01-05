@@ -1,0 +1,9 @@
+F:\c++\ExcelRead\TxtPlug\obj\Debug\TxtPlug.csprojResolveAssemblyReference.cache
+F:\c++\ExcelRead\TxtPlug\bin\Debug\TxtPlug.dll
+F:\c++\ExcelRead\TxtPlug\bin\Debug\TxtPlug.pdb
+F:\c++\ExcelRead\TxtPlug\bin\Debug\ExcelRead.exe
+F:\c++\ExcelRead\TxtPlug\bin\Debug\AxInterop.WMPLib.dll
+F:\c++\ExcelRead\TxtPlug\bin\Debug\Interop.WMPLib.dll
+F:\c++\ExcelRead\TxtPlug\bin\Debug\ExcelRead.pdb
+F:\c++\ExcelRead\TxtPlug\obj\Debug\TxtPlug.dll
+F:\c++\ExcelRead\TxtPlug\obj\Debug\TxtPlug.pdb

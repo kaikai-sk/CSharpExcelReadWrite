@@ -1,0 +1,53 @@
+﻿<Window x:Class="ImageFlash.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageFlash"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="640" WindowStartupLocation="CenterScreen">
+    <Canvas x:Name="LayoutRoot">
+        <Canvas.Background>
+            <!--渐变的二维终止坐标, 起始坐标-->
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <!--此渐变停止点沿渐变向量的相对位置。默认值为 0.0。-->
+                <GradientStop Color="Black" />
+                <GradientStop Color="#FF3704F3" Offset="1"/>
+            </LinearGradientBrush>
+        </Canvas.Background>
+
+        <Menu>
+            <MenuItem Header="文件">
+                <MenuItem Header="打开" Name="menuOpen" Click="menuOpen_Click"></MenuItem>
+                <MenuItem Header="退出" Name="menuExit" Click="menuExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="效果展示">
+                <MenuItem Header="圆形展开" Name="menuCircularDevelopment"
+                          Click="menuCircularDevelopment_Click"></MenuItem>
+                <MenuItem Header="随机方块" Name="menuShuffleBlock"
+                          Click="menuShuffleBlock_Click"></MenuItem>
+                <MenuItem Header="交错扫描" Name="menuInterlaceSacn"
+                          Click="menuInterlaceSacn_Click"></MenuItem>
+                <MenuItem Header="水帘效果" Name="menuWaterCurtain"
+                          Click="menuWaterCurtain_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!--图片边框-->
+        <Rectangle StrokeThickness="18" Height="340" Canvas.Left="77" Canvas.Top="52" Width="480">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0408FF"/>
+                    <GradientStop Color="#FFEFEFF3" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+
+        <!--图片-->
+        <Canvas x:Name="canvas1" Height="310" Canvas.Left="92" Canvas.Top="66" Width="448">
+            <Image x:Name="image" Source="./Images/pict2.JPG" 
+                   Stretch="Fill" Width="448" Height="310" 
+                   d:LayoutOverrides="Height"/>
+        </Canvas>
+    </Canvas>
+</Window>

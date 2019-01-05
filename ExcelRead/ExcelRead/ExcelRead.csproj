@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F95152AF-018B-4B1E-8952-25B6E10C7EDB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExcelRead</RootNamespace>
+    <AssemblyName>ExcelRead</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeHeaderNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeHeaderNameForm.Designer.cs">
+      <DependentUpon>ChangeHeaderNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeSheetForm.Designer.cs">
+      <DependentUpon>ChangeSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnAddForm.Designer.cs">
+      <DependentUpon>ColumnAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompressForm.Designer.cs">
+      <DependentUpon>CompressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnDataBase.cs" />
+    <Compile Include="DeCompressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeCompressForm.Designer.cs">
+      <DependentUpon>DeCompressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocForm.Designer.cs">
+      <DependentUpon>DocForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption_Decryption.cs" />
+    <Compile Include="ExcelReadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelReadForm.Designer.cs">
+      <DependentUpon>ExcelReadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Iplug.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Picform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Picform.Designer.cs">
+      <DependentUpon>Picform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBarForm.Designer.cs">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMailForm.Designer.cs">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxtReadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxtReadForm.Designer.cs">
+      <DependentUpon>TxtReadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxtSetDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxtSetDialog.Designer.cs">
+      <DependentUpon>TxtSetDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegistForm.Designer.cs">
+      <DependentUpon>UserRegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VedioReadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VedioReadForm.Designer.cs">
+      <DependentUpon>VedioReadForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangeHeaderNameForm.resx">
+      <DependentUpon>ChangeHeaderNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeSheetForm.resx">
+      <DependentUpon>ChangeSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnAddForm.resx">
+      <DependentUpon>ColumnAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompressForm.resx">
+      <DependentUpon>CompressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeCompressForm.resx">
+      <DependentUpon>DeCompressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocForm.resx">
+      <DependentUpon>DocForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelReadForm.resx">
+      <DependentUpon>ExcelReadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Picform.resx">
+      <DependentUpon>Picform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.resx">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SendMailForm.resx">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxtReadForm.resx">
+      <DependentUpon>TxtReadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxtSetDialog.resx">
+      <DependentUpon>TxtSetDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegistForm.resx">
+      <DependentUpon>UserRegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VedioReadForm.resx">
+      <DependentUpon>VedioReadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\MSWORD.OLB" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Excel.dll" />
+    <Content Include="bin\EXCEL.EXE" />
+    <Content Include="Images\appIcon.jpg" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\newTxt.png" />
+    <Content Include="Images\openExcel.png" />
+    <Content Include="Images\openTxt.jpg" />
+    <Content Include="Images\openVedio.png" />
+    <Content Include="Images\newExcel.jpg" />
+    <Content Include="Images\Register.jpg" />
+    <Content Include="Images\secondClock.jpg" />
+    <Content Include="Images\sendMail.jpg" />
+    <Content Include="Images\WhiteBoard.jpg" />
+    <Content Include="UserList.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>99</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\plug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

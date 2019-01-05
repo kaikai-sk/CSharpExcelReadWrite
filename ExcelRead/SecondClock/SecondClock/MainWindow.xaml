@@ -1,0 +1,75 @@
+﻿<Window x:Class="SecondClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SecondClock"
+        mc:Ignorable="d"
+        Title="sk的秒表" Height="240" Width="320"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid Name="LayoutRoot" >
+        <Grid.Background>
+            <!--渐变画刷-->
+            <!--渐变的二维终止坐标, 起始坐标-->
+            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                <!--此渐变停止点沿渐变向量的相对位置。默认值为 0.0。-->
+                <GradientStop Color="Blue" Offset="0.279"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <!--水平左对齐，垂直顶对齐-->
+        <!--获取或设置在布局父对象（如面板）中组合对象时应用于此对象的水平对齐特征。-->
+        <Grid HorizontalAlignment="Left" Height="57.33" Margin="99,45,0,0"
+              VerticalAlignment="Top" Width="115.84">
+            <!--秒表的数字区域-->
+            <TextBlock Name="textBlock"  Margin="-1.353,5.824,-32.733,-21.108" 
+                        TextWrapping="Wrap"
+                       Text="0.000"
+                       Background="Black"
+                       Foreground="Lime"
+                       FontSize="64"
+                       FontFamily="times New Roman"
+                       FontWeight="Bold"></TextBlock>
+            
+            <!--包裹秒表数字的外面的框-->
+            <Rectangle StrokeThickness="9" Margin="-8.568,0,-38.218,-28.067">
+                <Rectangle.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.363,-0.017">
+                        <GradientStop Color="White"></GradientStop>
+                        <GradientStop Color="#FF462F08" Offset="0.253"/>
+                        <GradientStop Color="#FF281902" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Stroke>
+            </Rectangle>
+
+            <!--秒表的最外面的那层包装-->
+            <Rectangle StrokeThickness="3" Margin="-8.568,0,-37.218,-28.067">
+                <Rectangle.Stroke>
+                    <LinearGradientBrush EndPoint="0.608,0.959" StartPoint="0.392,0.041">
+                        <GradientStop Color="#FFF1EDDD"/>
+                        <GradientStop Color="#FF4D421E" Offset="0.598"/>
+                        <GradientStop Color="#FF6A603E" Offset="0.238"/>
+                        <GradientStop Color="#FF392E05" Offset="1"/>
+                        <GradientStop Color="#FFB8AD85" Offset="0.838"/>
+                    </LinearGradientBrush>
+                </Rectangle.Stroke>
+            </Rectangle>
+        </Grid>
+        <RepeatButton x:Name="rb1" Content="启动" 
+                      HorizontalAlignment="Left" Margin="31.904,74.169,0,0" 
+                      VerticalAlignment="Top" Width="52.524" Height="28.164" 
+                      Cursor="Wait" Interval="100" Delay="0" Click="rb1_Click" 
+                      ClickMode="Hover"/>
+        <RepeatButton x:Name="rb2" Content="复位" 
+                      HorizontalAlignment="Left" Margin="31.904,102.333,0,0" 
+                      VerticalAlignment="Top" Width="52.524" 
+                      Height="28.164" Cursor="Hand" Interval="100" 
+                      Delay="0" Click="rb2_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="19" 
+                   Margin="42,49.169,0,0" TextWrapping="Wrap" 
+                   Text="秒表" VerticalAlignment="Top" 
+                   Width="40.428" Foreground="White" FontWeight="Bold" 
+                   RenderTransformOrigin="0.247,-3.321"/>
+    </Grid>
+</Window>
